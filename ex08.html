@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>a 링크 태그</title>
+    
+    <style>/* 내부스타일*/
+        div{height: 1000px;} /*div태그를 높이값을 1000px로 해라*/
+        /*태그{속성:속성값;}*/
+        footer{height: 1000px;background-color: #000;color: #fff;}
+        /*높이,배경색:검정;글씨색상:흰색*/
+        a{color: #666;text-decoration:none;}
+/*
+        a태그는 밑줄,파란색.
+        text-decoration:none(밑줄 제거)
+*/
+    </style>
+</head>
+<body>
+    텍스트 링크
+    <p><a href="#">텍스트링크</a></p>
+    
+<!--
+    
+   a(anchor)
+    href(hypertext reference)-참조=주소경로(절대경로,상대경로)
+    #:임시링크, 빈링크. 아이디명을 나타낼 때 사용하는 기호. 주소경로에 사용시 그 문서의 맨 꼭대기로 이동하는 역할
+    
+    a링크:파란색 밑줄
+    방문했을 때 : 보라색 밑줄
+    클릭했을 때 : 빨간색 밑줄
+    target(웹페이지 창)
+    _self:내 자신 창.기본값
+    _blank:새창.클릭할 때마다 새창
+    new:새창.한번만 새창
+-->
+    
+  
+    
+    <h2>절대경로</h2>
+    <p><a href="https://www.naver.com" target="_blank">네이버</a></p>
+    <p><a href="https://www.daum.net" target="new">다음</a></p>
+    
+    <h2>상대경로</h2>
+    <p><a href="./ex05.html" target="new" title="이미지태그파일로 이동">이미지태그 파일로 이동</a></p>
+    
+    <p><a href="./images/google_logo.png">구글로고 이미지로 이동</a></p><!-- 그림파일로 이동-->
+    <p><a href="https://www.naver.com" target="new"><img src="images/naver-logo.png" alt="네이버로 이동"></a></p><!-- 이미지에 링크-->
+    <p><a href="tel:042-476-2111">042-476-2111</a></p>
+    <p><a href="sms:010-1234-5678">문자보내기</a></p>
+    <p><a href="mailto:admin@naver.com">관리자에게 메일보내기</a></p>
+    
+    <p><a href="#pro1">상품상세페이지</a></p>
+    <p><a href="#pro2">상품평</a></p>
+    <p><a href="#ft">맨아래로 이동</a></p>
+    
+    <div id="pro1">여기는 상품 상세 페이지입니다.</div>
+    <div id="pro2">여기는 상품평 페이지입니다.</div>
+    <footer id="ft">
+    여기는 푸터영역입니다.
+    <p><a href="#">Top이동</a></p>
+    </footer>
+    
+</body>
+</html>
+
+
+
+
+
+

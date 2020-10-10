@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>새로나온 form태그</title>
+</head>
+<body>
+    <p>홈페이지 : http://<input type="url"><!-- url입력란--></p>
+    <p>전화걸기 : <input type="tel"><a href="tel:042-123-4567">042-123-4567</a></p>
+    <p>문자보내기 :<a href="sms:010-1234-5678">문자보내기</a></p>
+    <p>수량선택 :<input type="number" min="0" max="100" value="0" step="5"></p>
+    <!--스핀박스 화살표 클릭해서 숫자를 선택.최소0~100까지 입력.step은 짝수나 홀수로 제한할 때 숫자간격.기본값은 1-->
+    <p>단계선택 :순한맛<input type="range" min="1" max="5" >매운맛<!-- 슬라이드 막대로 단계를 선택--></p>
+    <p>컬러선택<input type="color" value="#cc6600"></p><!--색상표시박스-->
+    <p>년월일1 : <input type="date" min="1900-01-01" max="2020-12-31"></p><!--  yyyy-mm-dd -->
+    <p>시간입력 :<input type="time"></p><!-- 00:00~23:59 -->
+    <p>년월일2 :<input type="datetime-local"></p><!-- 지역의 날짜와 시간-->
+    <p><input type="month"></p><!--   yyyy-mm   -->
+    <p><input type="week"></p>1월 첫째주를 기준으로 몇번째 주인지 연도와 주가 표시됨. yyyy-n주 
+    <p><input type="email"></p>
+    
+</body>
+</html>

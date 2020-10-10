@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>새로운 태그</title>
+</head>
+<body>
+    <h2>새로운 태그</h2>
+    <p>동해물과 백두산이 마르고 닳도록 하느님이 보우하사 <mark>우리 나라 만세</mark> 무궁화 삼천리 화려강산</p>
+    <marquee>텍스트가 움직입니다.</marquee>
+    <details>
+        <summary>2019년 &amp; Wishlist</summary>
+        <ul>
+            <li>하고 싶은것: 다이어트</li>
+            <li>먹고 싶은것: </li>
+            <li>가고 싶은곳: 제주도</li>
+            <li>버리고 싶은것: 게으름</li>
+        </ul>
+       <!-- details:해당 내용을 보이게 하거나 숨기게 할 수 있는 대화형 위젯. 텍스트,이미지,동영상,음악 삽입가능
+        summary:보여주고 숨겨주고 할 수 있는 모든 컨텐츠 제목섹션-->
+    </details>
+    <form action="" method="post">
+        <fieldset>
+            <legend> 과목선택</legend>
+            <input list="lectures" name="lecture">
+            <datalist id="lectures">
+                <option value="HTML">
+                <option value="CSS">
+                <option value="JAVA">
+                <option value="C++">     
+            </datalist>
+        </fieldset>    
+    </form>
+    <h3>다운로드 콘텐츠 로딩의 양을 표시</h3>
+    <p><progress min="0" max="100" value="30"><span>0</span>%</progress></p>
+    progress:진행상황 상태 보여주기.특별한 단위는 없고 단위는 표시되지 않음
+    
+    <h3> 투표의 진행상황이나 확률</h3>
+    <p>현재 투표 진행상황1: <meter min="0" max="100" value="20" low="30" high="65"></meter></p>
+    <p>현재 투표 진행상황2: <meter min="0" max="100" value="60" low="30" high="65"></meter></p>
+    <p>현재 투표 진행상황3: <meter min="0" max="100" value="80" low="30" high="100"></meter></p>
+    <!--min:최소값, max:최대값
+    value: 범위안에서 차지하는 값
+    low:이 정도면 낮다 라고 할 정도의 범위를 지정
+    high:이 정도면 높다 라고 할 정도의 범위를 지정
+    low 와  high값 사이에  value값이 있으면 초록, 없으면 노랑-->
+    <figure>
+        <img src="images/daejeonsiso.jpg" alt="대전시소">
+        <figcaption>대전시청 이벤트</figcaption>
+    </figure>
+ <!--figure:전체적인 흐름과 독립적으로 영역을 설정
+    figcaption:이미지 설명-->
+</body>
+</html>
+
+
+
+
+
+

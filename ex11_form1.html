@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>폼요소1</title>
+</head>
+<body>
+    <form action="media/request.php" method="post">
+       <fieldset>
+           <legend>회원가입</legend>
+           아이디 : <input type="text" size="10"><br>
+           비밀번호 : <input type="password" name="pw1" placeholder="비밀번호를 입력하세요"><br>
+           비밀번호 확인 : <input type="password" name="pw2" placeholder="비밀번호를 다시 입력하세용"><br>
+           <input type="button" name="button" value="로그인">
+           <p>
+             메일 수신 여부 : 
+              <input type="radio" name="radio1" checked> 예 &nbsp;&nbsp;&nbsp; 
+              <input type="radio" name="radio1">아니오 
+           </p>
+           <p>
+              관심분야 :<br>
+              <input type="checkbox" name="checkbox" checked value="html">HTML<br> 
+              <input type="checkbox" name="checkbox" value="css">CSS<br> 
+              <input type="checkbox" name="checkbox" value="java">JAVA<br> 
+              <input type="checkbox" name="checkbox" value="C++" disabled>C++
+           </p>
+           <p>
+               <input type="file" name="fileinput">
+           </p>
+           <p>
+               <select name="fruit">
+                    <option value="사과">사과</option>
+                    <option value="귤" selected>귤</option>
+                    <option value="딸기">딸기</option>
+                    <option value="복숭아">복숭아</option>
+                </select>  
+           </p>
+           <p>
+              <textarea name="textarea" placeholder="간단한 자기소개 입력" rows="5" cols="30"></textarea> 
+           </p>
+           <p>
+               <button type="button" onclick="alert('버튼을 클릭하셨군요!^^')">버튼을 눌러주세요</button>
+               <!--onclick:자바스크립트 함수(버튼을 클릭했을 때)
+               alert(경고창)-->
+           </p>
+           <p>
+              <input type="submit" value="회원가입"> 
+              <input type="reset" value="취소"> 
+              <input type="image" src="images/search-btn.png" width="90" style="vertical-align: middle"> 
+            <input type="hidden" name="hiddeninput" value="숨겨진버튼">
+           </p>
+       </fieldset> 
+        
+    </form>
+</body>
+</html>

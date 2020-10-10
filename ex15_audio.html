@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>오디오태그</title>
+</head>
+<body>
+    <!--<audio src="file/Kalimba.mp3" controls="controls" autoplay="autoplay"  loop preload="metadata" ></audio>-->
+    <!--src(오디오파일 경로)="폴더명/파일명.확장자명"
+    mp3(오디오규격으로 개발된 손실압축형 파일형식)-iE,크롬,사파리,오페라
+    wav(IBM,MS 표준오디오 방식)-익스플로러(X)
+    ogg(MP3대안으로개발된 개방형 멀티미디어파일)-IE,넷스케이프(X)
+    
+   controls:음악재생도구
+   autoplay:음악을 자동재생할지 지정. 모바일에서는 자동재생 안됨.  
+   loop:반복재생
+   preload="auto" 사용자가 즉시 이용할 수있도록 미디어파일 전체를 미리 다운로드함. 다운로드가 끝나도 재생버튼 눌러야함. 
+   preload="metadata"전체를 다운로드 하지 않고 메타데이터 정보만 다운로드 함. 
+   preload="none"미리 다운로드하지 않고 사용자가 재생버튼 눌렀을 때만 다운로드 시작함.-->
+   <audio controls preload="auto" loop autoplay>
+       <source src="file/Kalimba.mp3" type="audio/mp3">
+       <source src="file/Kalimba.ogg" type="audio/ogg">
+        이 오디오파일은  재생되지 않습니다.
+   </audio>
+</body>
+</html>
+
+
+
+

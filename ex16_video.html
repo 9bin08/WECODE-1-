@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>비디오태그</title>
+</head>
+<body>
+    
+    <!--src(비디오파일 경로)="폴더명/파일명.확장자명"
+   비디오확장자:mp4,webm,ogv
+    
+   controls: 비디오 재생도구
+   autoplay:비디오를 자동재생할지 지정. 
+   loop:반복재생
+   preload="auto" 사용자가 즉시 이용할 수있도록 미디어파일 전체를 미리 다운로드함. 다운로드가 끝나도 재생버튼 눌러야함. 
+   preload="metadata"전체를 다운로드 하지 않고 메타데이터 정보만 다운로드 함. 
+   preload="none"미리 다운로드하지 않고 사용자가 재생버튼 눌렀을 때만 다운로드 시작함.
+   width(가로폭):가로만 지정하고 세로를 지정하지 않으면 세로는 auto가 됨
+   height(세로폭)
+   -->
+   <video controls preload="auto" loop autoplay width="500" height="400">
+       <source src="file/Wildlife.mp4" type="video/mp4">
+       <source src="file/Wildlife.webm" type="video/webm">
+   </video>
+</body>
+</html>
+
+
+
+
