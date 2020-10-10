@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>상태선택자</title>
+    <style>
+        input:enabled{background: pink;}/* 요소 중에 사용할 수 있는 것 */
+        textarea:disabled{background: #f00;}/* 요소 중에 사용할 수 없는 것 */
+        input + label{color: #00f;}/* 인접선택자 */
+        input:checked + label{color: #f00}/* input박스 중에 체크된 상태인 것의 바로 뒤에 오는 label태그 */
+       /* :enabled,:disabled,:checked는 CSS3부터 정의됨*/
+        #ft:target{background: #ff0;}
+        /*  
+        a태그 링크를 클릭해서 지정한 위치 이동한 것중에 target이라는 선택자를 이용해 앵커로 연결된 부분, 즉 앵커의 목적지에 스타일을 적용 
+        */
+    </style>
+</head>
+<body>
+   <a href="#ft">푸터로 가기</a>
+    <input type="text" ><br>
+    <input type="checkbox" name="ck" id="ck1" checked><label for="ck1">선택1</label><br>
+    <input type="checkbox" name="ck" id="ck2"><label for="ck2">선택2</label><br>
+    <input type="hidden" name="hiddeninput" value="hiddeninputvalue"><br><!-- 박스가 안보임 -->
+    <input type="text" disabled="disabled"><br><!-- 박스는 보이지만 텍스트는 쓸 수 없음 -->
+    <textarea name="textarea" placeholder="회원약관조항" disabled></textarea>
+    
+    <!--div>a#ft-->
+    <div><a href="" id="ft">여기는 Footer영역입니다. </a></div>
+</body>
+</html>

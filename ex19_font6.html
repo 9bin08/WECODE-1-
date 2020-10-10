@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>글꼴 관련 속성</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <!--<link rel="stylesheet" href="./font.css">-->
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Noto+Sans+KR&display=swap');
+        @import "font.css";
+        
+        .font1{ font-family: 'Noto Sans KR', sans-serif;}
+        .font2{font-family: 'Nanum Pen Script', cursive;font-size: 20px;}
+        .font3{ font-family:"ecom";}
+        
+        /* 글씨 굵기*/
+       /* 100~900 ,500(normal), 700(bold)*/
+        .fw1{font-weight: normal;}/* 일반,보통굵기*/
+        
+        .fw2{font-weight: 100;}
+        .fw3{font-weight: 700;}
+        
+        /* 폰트 스타일 */
+        .fs1{font-style: normal;}
+        .fs2{font-style: italic;}
+        
+        /*  영문자 소문자,대문자*/
+        .fv1{font-variant: normal;}
+        .fv2{font-variant: small-caps;}
+        
+        body{font-size: 14px;}
+        /*기본폰트 16px==100%==1em==12pt*/
+        
+        /* 폰트 사이즈 */
+        .em1{font-size: 3.5em;}/* 14px*3.5 =49px */
+        .pt1{font-size: 20pt;}/* 26px=1.8527em  절대단위*/
+        .px1{font-size: 20px;}/* 절대단위,고정단위*/
+        .per1{font-size: 350%;}/* 14*3.5=49px */
+        .rem1{font-size: 3.5rem;}/* 16*3.5=56px  */
+        .vw1{font-size: 3.5vw;}/* 19.2* 3.5 =67.2  */
+        .vh1{font-size: 3.5vh;}/*  10.8* 3.5= 37.8 */
+        
+        /* 폰트 통합 속성 */
+        .fnt1{
+            font-family: "돋움",Dotum,sans-serif;
+            font-size: 24pt;
+            font-weight: bold;
+            font-style: italic;
+            font-variant: small-caps;
+            line-height: 1.6;
+        }
+         /*font-weight-->font-style -->font-variant--> font-size/line-height--> font-family*/
+        .fnt2{font:bold  24px/1.6 "NanumGothic","나눔고딕",sans-serif}
+        
+        /* css3 추가된 텍스트 관련 속성 */
+        .wd{width: 300px;border: 1px solid #0f0;}
+        .txt1{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+        .txt2{white-space: nowrap;overflow:hidden;text-overflow: clip;}
+        .txt3{height: 3.6em;white-space: normal;word-wrap:break-word;word-break: break-all;overflow: auto;}
+        
+        /* 14*3.6 
+        word-wrap:break-word; 단어보호  normal(다음칸으로통쨰로 넘어감)
+        
+        word-break: break-all; 글자가 차곡차곡 공간을 채움
+        */
+    </style>
+</head>
+<body>
+    <p class="font1">폰트체1</p>
+    <p class="font2">폰트체2</p>
+    <p class="font3">font-family</p>
+    
+    <h2 class="fw1">일반글씨</h2>
+    <p class="fw2">가는글자</p>
+    <p class="fw3">굵은글자</p>
+    
+    <em class="fs1">기본 문자</em>
+    <p class="fs2">기울어진 문자</p>
+  
+    <p class="fv1">Jung Hye Jin</p>
+    <p class="fv2">Jung Hye Jin</p>
+    
+     <div>일반폰트크기</div>
+     <p class="em1">em단위 폰트</p>
+     <p class="pt1">pt단위 폰트</p>
+     <p class="px1">px단위 폰트</p>
+     <p class="per1">percent 단위 폰트</p>
+     <p class="rem1">rem 단위 폰트</p>
+     <p class="vw1">vw단위 폰트</p>
+     <p class="vh1">vh단위 폰트</p>
+    
+    <p class="fnt1">Font 종합속성1</p>
+    <p class="fnt2">폰트 종합속성2</p>
+    
+    <p class="wd txt1">모든 국민은 소급입법에 의하여 참정권의 제한을 받거나 재산권을 박탈당하지 아니한다. 대통령은 필요하다고 인정할 때에는 외교·국방·통일 기타 국가안위에 관한 중요정책을 국민투표에 붙일 수 있다. 대한민국은 민주공화국이다. 대통령은 취임에 즈음하여 다음의 선서를 한다. 감사위원은 원장의 제청으로 대통령이 임명하고, 그 임기는 4년으로 하며, 1차에 한하여 중임할 수 있다.</p>
+    <p class="wd txt2">국민경제의 발전을 위한 중요정책의 수립에 관하여 대통령의 자문에 응하기 위하여 국민경제자문회의를 둘 수 있다. 제2항의 재판관중 3인은 국회에서 선출하는 자를, 3인은 대법원장이 지명하는 자를 임명한다. </p>
+    <p class="wd txt3">전직대통령의 신분과 예우에 관하여는 qrqrr-trawtrat 정한다. 누구든지 병역의무의 이행으로 인하여 불이익한 처우를 받지 아니한다. 이 헌법중 공무원의 임기 또는 중임제한에 관한 규정은 이 헌법에 의하여 그 공무원이 최초로 선출 또는 임명된 때로부터 적용한다. 각급 선거관리위원회의 조직·직무범위 기타 필요한 사항은 법률로 정한다.</p>
+    
+    
+</body>
+</html>

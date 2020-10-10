@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>웹폰트-구글 폰트 링크(standard방식)</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster+Two&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sunflower:300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <style>
+     /*reset*/
+        *{margin: 0;padding: 0;}
+        body{
+            font-family: "맑은 고딕","Malgun Gothic",굴림,Gulim,arial,sans-serif;}
+        /*font-family(글씨체):두글자 이상이면 "",''안에 서술. 한글1~2개,영어1~2개 대체글자를 ,(콤마)로 서술 
+        sans-serif:고딕계열
+        serif:돌기가 있는 글씨체,바탕체나 명조체계열
+        cusive:손글씨체 계열*/
+        h1{
+            font-family: 'Lobster Two', cursive;
+            font-size: 25px;
+            font-weight: normal;
+        }
+        /*
+        font-size:px,em,vw,vh,rem,%
+        font-weight(글씨 굵기):100~900. normal(일반,500),bold(700)
+        font-style:ltalic(기울어진글씨),normal(일반적으로 세워진 글씨체),oblique(기울어진 글씨)
+       
+        font-variant: small-caps(영문소문자를 작은 대문자로 표시),normal(일반적인 영문자)
+        line-height(행간) font-size:16px*1.6=19.2px
+        */
+        address{font-style:normal;}
+        p{width: 100px;height: 200px;border: 1px solid #00f;font-variant: small-caps;line-height: 160%;}
+        .webFont{font-family: 'Sunflower', sans-serif;font-size: 2em;color: deeppink;}
+        .linkFont{font-size: 2em;color: #366c22;text-decoration: none;font-family: 'Quicksand', sans-serif;}
+    </style>
+</head>
+<body>
+    <h1>WEB STANDARD PUBLISHING</h1>
+    <p>webdesign의 한 분야로 원래 용어는 웹 콘텐츠 UI이다.</p>
+    <div class="webFont">웹폰트 적용글씨 스타일</div>
+    <div><a href="" class="linkFont">Link</a> 가 걸린 글씨</div>
+    <address> 대전시 서구 둔산로 188  오라클빌딩 </address>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>구조의사클래스-순서위치선택자</title>
+    <style>
+        ul{list-style: none;overflow: hidden;}
+        /*overflow: hidden;(내용이 넘치면 스크롤바를 숨겨라)
+        ul 에 overflow: hidden;을 사용하면 높이가 0이었던것이 높이값을 표현해서 블럭(가로,세로 등 부피를 가짐) 처리
+         ul 자손 중 float값을 사용한 적이 있다면 부모인 ul에 overflow: hidden;을 사용해서 레이아웃 정렬, 높이값을 잡아준다 */
+        li{border: 1px solid #000;float: left;padding: 15px;}
+       /* float: left;블럭이었던 요소를 왼쪽 가로로 배열해주는 속성*/
+        /* 첫번째 자식요소*/
+        li:first-child{border-radius: 10px 0 0 10px;}
+        /* border-radius(테두리 모서리 둥글기)
+        상단왼쪽 상단오른쪽 하단오른쪽 하단왼쪽
+        */
+        /* 마지막 자식요소 */
+        li:last-child{border-radius: 0 10px 10px 0;}
+        /* 특정 순서*/
+        li:nth-child(4){background: #ff0;}
+        li:nth-child(3n){background: skyblue;}/*3배수*/
+        li:nth-child(3n+1){background: orange;}/* 1,4,7번째 */
+        /*부모요소를 가지고 있는 경우
+        :first-child
+        :last-child
+        :nth-child(n):n번째 자식요소
+        :nth-child(2n):짝수번째*/
+      /* 부모요소가 없을 경우(p태그 여러개 나열되었을 때) 
+        first-of-type --> 형제 관계에 있는 것중에 첫번째 
+        */
+        p:first-of-type{background: #20f492;} 
+        p:last-of-type{background: #3bbcb7;}
+        p:nth-of-type(3){background: #eb510c;}
+        p:nth-last-of-type(2){color: #f00;}
+        
+        a{text-decoration: none;color: #666;font-weight: bold;}
+       /* a태그 중에 내용이 비어있는곳*/
+        a:empty{width: 200px;height: 50px;background: #000;display: block;}
+        /*  display: block; 인라인요소를 부피를 가지도록 블럭처리  */
+        /*li 요소 중에 자기자신 한개만 있는것*/
+        li:only-child{background-color: navy;}
+        div:only-of-type{width: 100px;height: 100px;border: 1px solid #000}
+        :root{background: #ccc;}
+      
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="">라이언</a></li>
+        <li><a href="">어피치</a></li>
+        <li><a href="">프로도</a></li>
+        <li><a href="">네오</a></li>
+        <li><a href="">무지</a></li>
+        <li><a href="">콘</a></li>
+        <li><a href="">튜브</a></li>
+        <li><a href="">제이지</a></li>
+    </ul>
+    <p>내용1</p>
+    <p>내용2</p>
+    <p>내용3</p>
+    <p>내용4</p>
+    <p>내용5</p>
+    <a href="http://www.naver.com"></a>
+    <a href="http://google.com">구글</a>
+    <a href="http://daum.net">다음</a>
+    <ul>
+        <li><a href="#">Menu1</a></li>
+        <li><a href="#">Menu2</a></li>
+        <li><a href="#">Menu3</a></li>
+        <li><a href="#">Menu4</a></li>
+    </ul>
+    <ul>
+        <li><a href="">Top으로 가기</a></li>
+    </ul>
+    <div>12455</div>
+</body>
+</html>

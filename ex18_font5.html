@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>폰트 관련 속성</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <!--  font-family: 'Noto Sans KR', sans-serif; -->
+    <style>
+        @import "font.css";
+        
+        .font1{font-family: 'Noto Sans KR', sans-serif;}
+        .font2{font-family:"NanumGothic","나눔고딕",sans-serif;}
+        .font3{font-family:"ecom",cursive;}
+          
+        /* 문단 정렬 */
+        .align1{text-align: center;}
+        .align2{text-align: right;}
+        .align3{width: 300px;border: 1px solid #00f;text-align: justify;}
+        
+        /* 이미지에 대한 글자의 세로 정렬 */
+        .vAlign1 img{vertical-align: top;}
+        .vAlign2 img{vertical-align: middle;}
+        
+        /* 문단 들여쓰기*/
+        .indent1{width: 500px;border: 1px solid #00f;text-indent: 20px;padding: 50px;text-align: justify;}
+        .indent2{width: 500px;border: 1px solid #f00;padding: 30px;text-indent: -30px;}
+        .indent3{width: 100px;height: 40px;background: #fcc;border: 0;text-indent: -9999px;cursor: pointer;}
+        /*text-indent: -9999px;글자를 화면밖으로 밀어버리는 효과
+        cursor: pointer 버튼은 링크가 아니기때문에 마우스 클릭 유도하기위해 커서포인터를 손가락모양으로 나타냄 
+        */
+        
+        /*  영문자 대문자,소문자로 변환 */
+        .trans1{text-transform: uppercase;}/* 모두 대문자로 */
+        .trans2{text-transform: capitalize}/* 단어 첫글자만 대문자로 */
+        .trans3{text-transform: lowercase;}/* 모두 소문자로 */
+        
+       /* 밑줄 */   
+        .deco1{text-decoration: underline}  
+        .deco2{text-decoration: line-through;}  
+        .deco3{text-decoration: overline;}  
+        .deco4{text-decoration: none;}  
+        
+        /* 자간*/
+        .ls1{letter-spacing: 20px;}
+        .ls2{letter-spacing: -2px;}
+        
+        /*어간*/
+        .ws1{word-spacing: 30px;}
+        .ws2{word-spacing: -5px;}
+        
+        /* 행간 */
+        .lh1{width: 500px;border: 1px solid #c0c;line-height: 40px;}
+        .lh2{width: 500px;border: 1px solid #c0c;line-height: 3;}/*  16px*3   3배=3em=300%   */
+        
+        /* 글씨 그림자 */
+        .txt_sh{font-size: 4em;font-weight: 900;color: #ff0;text-shadow: 0 0 10px #000;}
+        /*text-shadow: x축 y축 blur 그림자색상;
+        inset(안쪽 그림자)
+        */
+        
+        /*  글씨의 방향 */
+        .dir1{width: 500px;border: 1px solid #c0c;direction: rtl;}
+    </style>
+</head>
+<body>
+   <!-- p.font$*3-->
+    <p class="font1">폰트체</p>
+    <p class="font2">폰트체</p>
+    <p class="font3">font-family</p>
+    
+    <p>일반글자</p>
+    <p class="align1">가운데 정렬</p>
+    <p class="align2">오른쪽 정렬</p>
+    <p class="align3">문단정렬 중 양쪽정렬입니다. 문단정렬 중 양쪽정렬입니다. 문단정렬 중 양쪽정렬입니다. 문단정렬 중 양쪽정렬입니다. 문단정렬 중 양쪽정렬입니다. 문단정렬 중 양쪽정렬입니다. 문단정렬 중 양쪽정렬입니다.문단정렬 중 양쪽정렬입니다.</p>
+    
+    <p class="vAlign1">이미지와의 정렬<img src="images/daum.png" alt="위쪽정렬"></p>
+    <p class="vAlign2">이미지와의 정렬<img src="images/cake2.jpg" alt="중간정렬"></p>
+    
+    <p class="indent1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus at optio quos aut iusto est quas incidunt, tempore numquam aspernatur inventore eos, rem aliquid, veniam. Similique dolorem placeat excepturi eveniet.</p>
+    <p class="indent2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus at optio quos aut iusto est quas incidunt, tempore numquam aspernatur inventore eos, rem aliquid, veniam. Similique dolorem placeat excepturi eveniet.</p>
+    <button class="indent3">버튼</button>
+    
+    <p class="trans1">Happy Day!~~모두 대문자로</p>
+    <p class="trans2">happy day!~~단어의 첫글자만 대문자로</p>
+    <p class="trans3">haPpY dAy!~~ 모두 소문자로 </p>
+    
+    <p class="deco1">2019년 11월 빼빼로데이 이벤트! 밑줄</p>
+    <p class="deco2">2019년 11월 빼빼로데이 이벤트! 가운데취소선</p>
+    <p class="deco3">2019년 11월 빼빼로데이 이벤트! 윗줄</p>
+    <a href="" class="deco4">2019년 11월 빼빼로데이 이벤트!  줄없음 </a>
+    
+    <p class="ls1">자간은 글자와 글자사이의 간격! 20px</p>
+    <p class="ls2">자간은 글자와 글자사이의 간격! -2px</p>
+    <p class="ws1">어간은 단어와 단어사이의 간격! 30px</p>
+    <p class="ws2">어간은 단어와 단어사이의 간격! -5px</p>
+    
+    <p class="lh1">행간은 줄과 줄사이의 간격입니다.행간은 줄과 줄사이의 간격입니다.행간은 줄과 줄사이의 간격입니다.행간은 줄과 줄사이의 간격입니다.행간은 줄과 줄사이의 간격입니다.행간은 줄과 줄사이의 간격입니다.행간은 줄과 줄사이의 간격입니다.</p>
+    <p class="lh2">행간은 줄과 줄사이의 간격입니다.행간은 줄과 줄사이의 간격입니다.행간은 줄과 줄사이의 간격입니다.행간은 줄과 줄사이의 간격입니다.행간은 줄과 줄사이의 간격입니다.행간은 줄과 줄사이의 간격입니다.행간은 줄과 줄사이의 간격입니다.</p>
+    
+    <p class="txt_sh">PUBLISHING</p>
+    
+    <p class="dir1">행간은 줄과 줄사이의 간격입니다.행간은 줄과 줄사이의 간격입니다.행간은 줄과 줄사이의 간격입니다.행간은 줄과 줄사이의 간격입니다.행간은 줄과 줄사이의 간격입니다.행간은 줄과 줄사이의 간격입니다.행간은 줄과 줄사이의 간격입니다.</p>
+    
+    
+    
+</body>
+</html>

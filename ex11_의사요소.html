@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>의사요소: 전/후 선택자,첫줄,첫글자</title>
+    <style>
+        a{text-decoration: none;color: #333;}
+        /*전/후선택자:요소의 앞이나 뒤에 지정한 내용을 추가. css2부터 정의*/
+        a:before{content: "사이트 : ";}
+        a:after{content: attr(title)'-'attr(href);font-size: 14px;color: #ffcc00;}
+/*
+        content:"내용입력"
+        content: attr(속성값) attr:가져오다
+*/
+        /*첫줄*/
+        p::first-line {color: #ff4500;} 
+        /*첫철자*/
+        p::first-letter{color: #ffd700;font-size: 2em;font-weight: bold;}
+        /* 내용이 선택되어 있을 때=블럭이 씌어져 있을때=커서가 드래그 되었을 때  */
+        p::selection{background-color: pink;color: #3b0d03;}
+    </style>
+</head>
+<body>
+    <h1><a>링크가 없는 태그</a></h1>
+    <h1><a href="http://www.naver.com" target="new" title="네이버로 이동">네이버</a></h1>
+    <h1><a href="http://www.daum.net" target="new" title="다음으로 이동">다음</a></h1>
+    <h1><a href="http://www.nate.ccom" target="new" title="네이트로 이동">네이트</a></h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ducimus deleniti non ullam aliquid commodi necessitatibus illo eius voluptatem quasi facere fugit eaque dolorem assumenda consequatur atque quibusdam, eos excepturi!</p>
+    <p>대한민국의 경제질서는 개인과 기업의 경제상의 자유와 창의를 존중함을 기본으로 한다. 이 헌법은 1988년 2월 25일부터 시행한다. 다만, 이 헌법을 시행하기 위하여 필요한 법률의 제정·개정과 이 헌법에 의한 대통령 및 국회의원의 선거 기타 이 헌법시행에 관한 준비는 이 헌법시행 전에 할 수 있다.</p>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>부정선택자,언어선택자</title>
+    <style>
+        input{border: 1px solid #000;outline: none;}
+        input[type="text"]{width: 300px;height: 30px;}
+        input:not([type="password"]){background-color: #ff0;width: 150px;border-color: #00f;}
+        /*:not(선택자)--> ()안에 있는 선택자를 제외하고*/
+        
+        /*언어선택자*/
+        p:lang(en){color: #00f;}
+        p:lang(ko){width: 500px;background-color: pink;}
+    </style>
+</head>
+<body>
+    <input type="text"><br>
+    <input type="password"><br>
+    <input type="file"><br>
+    <h2>언어선택자</h2>
+    <p lang="en">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita laborum deserunt vero quibusdam earum, vitae doloribus assumenda cumque magni aliquid ex alias libero at iste quas dolores cupiditate praesentium non.</p>
+    <p lang="ko">내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.</p>
+</body>
+</html>

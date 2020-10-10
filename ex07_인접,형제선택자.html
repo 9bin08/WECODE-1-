@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>동위선택자-인접선택자,형제선택자</title>
+    <style>
+        /* 일반동위선택자=형제선택자*/
+        h1 ~ h2{background: #ffc0cb;}
+        /* 인접동위선택자=인접선택자(바로 뒤에 오는)*/
+        h1 + h2{color: #9300ff;}
+        h3 + h2{
+            border: 2px dotted #f00;
+        }
+        /*
+        border-width: 2px; 테두리두께
+        border-style: dotted;테두리스타일
+        border-color: #f00; 테두리색상
+        */
+    </style>
+</head>
+<body>
+    <!--h1+h2*2+h3+h2*2-->
+    <h1>트와이스</h1>
+    <h2>레드벨벳</h2>
+    <h2>블랙핑크</h2>
+    <h3>ITZY</h3>
+    <h2>여자친구</h2>
+    <h2>러블리즈</h2>
+</body>
+</html>

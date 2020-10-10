@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>background 속성</title>
+    <style>
+        /* 초기화 */
+        *{margin: 0;padding: 0;}
+        body,html{width: 100%;height: 100%;}
+        h1{color: #fff;text-align: center;line-height: 4;text-shadow: 0 0 10px #000;}
+        .page{width: 500px;height: 500px;}
+        .back1{color: #7070fa;background-color: rgba(255, 140, 0, 0.5);}
+   /* 1. color:blue-->#0000ff-->#00f(3자리로 축약)
+      2. color: #7070fa;반복문자,숫자 아니면 6개 다씀 
+      3. rgb(red, green, blue) 0~255 2의 8승=256단계 0은 검정,255은 흰색  
+      4. rgba(red, green, blue, alpha)   Alpha(투명도) 0~1. 
+      1은 불투명.0은 투명. 0.5(반투명)
+        */
+        .back2{
+            background-image: url(images/BackgroundBack.png);
+            background-size:200px;
+            background-repeat: no-repeat;
+            background-position: 200px 100px;
+        }  
+        /*background-image: 경로(폴더명/파일명.확장자)
+        
+        background-size: auto(1대1)
+        contain(넓은 쪽을 100% 로 표시)
+        cover(좁은 쪽을 100% 로 표시)
+       100%(가로넓이 100%,세로 auto) 
+        100px(가로넓이 100px,세로 auto)
+       500px 300px( 가로넓이 세로높이)
+       100% 100%;
+        
+        background-repeat:repeat(반복,기본값) no-repeat(반복하지 않겠다.1번만 표시) repeat-y(수직반복)  repeat-x(수평반복)
+       
+        background-position: X방향위치 Y방향위치;
+        
+        */
+        
+        .back3{
+            /*background-image: url(images/image1.jpg);
+            background-size: 50%;
+            background-position: center center;
+            background-color: #09c;
+            background-repeat: no-repeat;*/
+            
+    /*background:url(경로) 위치 / 크기 반복여부 화면고정,배경색상;*/
+            background:url(images/image1.jpg) center / 50%  no-repeat,#09c;
+        }
+        
+        .back4{
+            background-image: url(images/image3.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            background-attachment:fixed;
+        }
+        /*background-attachment(배경이미지 고정여부)
+        scroll(기본값)
+        fixed(배경의 위치기 화면기준으로 고정됨)
+        
+        */
+        .back5 h1{
+            width: 500px;height: 500px;
+            padding: 50px;
+            border: 20px solid rgba(255,0,0,0.5);
+            background-image: url(images/image2.jpg);
+            background-repeat: no-repeat;
+            background-size: auto;
+            /*background-clip:border-box;*/
+           background-clip: padding-box;
+            background-origin: padding-box;
+        }
+        .back6{
+            margin: 200px auto;
+            background: #e2c0e0; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #e2c0e0 1%, #c4098c 46%, #8e6dbc 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, #e2c0e0 1%,#c4098c 46%,#8e6dbc 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, #e2c0e0 1%,#c4098c 46%,#8e6dbc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        }
+    </style>
+</head>
+<body>
+    <article class="page back1">배경색상속성:background-color</article>
+    <article class="page back2">
+        <h1>배경이미지 속성:backgroud-image</h1>
+        <h1>배경이미지 반복 속성:backgroud-repeat</h1>
+        <h1>배경이미지 사이즈 속성: background-size:</h1>
+        <h1>배경이미지 위치 속성:background-position</h1>
+    </article>
+    <article class="page back3"></article>
+    <article class="page back4">
+        <h1>배경이미지 고정 속성:background-attachment</h1>
+    </article>
+    <article class="page back5">
+        <h1> 배경이미지 적용 조절 여부: background-clip </h1>
+        
+    </article>
+    <article class="page back6">
+        <h1>그라디언트</h1>
+    </article>
+    
+</body>
+</html>

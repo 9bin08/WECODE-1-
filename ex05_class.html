@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>id 선택자</title>
+    <style>
+       /* 전체선택자 */ 
+        *{margin: 0;padding: 0;}/* 외부여백:없음;내부여백:없음  */
+        
+        /* 태그선택자= 타입선택자 */
+        body{
+            font-family: "굴림",Gulim,"맑은 고딕","Malgun Gothic",arial,sans-serif;
+            font-size: 18px;
+            background-color: #fff8dc;
+            padding: 50px;
+        }
+        h2{font-size: 1.5em;}
+        /*   18px*1.5=27px  */
+        p{font-size: 15px;}
+      /* font-family(글씨체) :한글 1~2개,영문1~2개 대체폰트 서술
+        font-size(폰트크기)(16px=100%=1em=12pt)
+        18px=14pt*/
+       
+        /* 클래스 선택자*/
+        .txt1{font-size: 22px;color: #a52a2a;}
+        
+        /*
+        1.앞에 .을 붙인다.
+        2.한 파일안에서 여러번 사용가능.
+        3.대소문자를 구분한다.
+        tit1 --- tiT1
+        4.특수문자 안됨(-[하이픈],_[언더바])
+          tit!,$tit(X)
+        5.숫자먼저 오면안됨
+           1tit,2txt(X)
+        6.영문+숫자,영문+영문,영문+영문+숫자
+        tit1,toplist,toplist1
+         tit-1,top-list,top_list_1
+        7.영문+영문(카멜기법)-두번째 단어의 첫째 철자를 대문자로 쓰는 방법
+            topList
+        8.띄어쓰기 안됨
+           top list(이중클래스)*/
+        .secTit{
+            font-size: 30px;/* 글씨크기*/
+            background-color: #fc0;
+            width: 300px;/*박스넓이*/
+            height: 50px;/*박스높이*/
+            border-width: 2px;/* 테두리두께*/
+            border-style: solid;/*테두리모양 :실선,일직선*/
+            border-color: #f00;/* 테두리 색상*/
+            text-align: right;/*글씨정렬:left(기본값), center(가운데),right(오른쪽)*/
+        }
+        
+        .par{width: 500px;}
+    </style>
+</head>
+<body>
+    <h2 class="secTit">Lorem</h2>
+    <h3>ipsum</h3>
+    <p class="txt1 par">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut sem in lectus eleifend sodales. Maecenas elit dui, volutpat sit amet blandit vel, feugiat in leo. Aliquam ultricies, tortor id facilisis tristique, ligula arcu laoreet sem, id vehicula turpis mauris ac nisl. Suspendisse vel leo maximus, dapibus ex aliquet, aliquet odio. </p>
+    <p>
+      Ut vestibulum cursus tortor. Donec ultrices nunc nec justo venenatis, vel fringilla erat viverra. Curabitur viverra ante quis neque porta elementum. Nunc condimentum dui nec ipsum sodales aliquet. Sed rhoncus in erat in tempus. Quisque posuere a nisi sit amet lobortis. Nullam varius nibh metus, in convallis odio pharetra non.   
+    </p>
+    <p class="txt1">헌법재판소에서 법률의 위헌결정, 탄핵의 결정, 정당해산의 결정 또는 헌법소원에 관한 인용결정을 할 때에는 재판관 6인 이상의 찬성이 있어야 한다. 국회가 재적의원 과반수의 찬성으로 계엄의 해제를 요구한 때에는 대통령은 이를 해제하여야 한다. 근로조건의 기준은 인간의 존엄성을 보장하도록 법률로 정한다.</p>
+
+
+</body>
+</html>
+
+
+
+
+
+

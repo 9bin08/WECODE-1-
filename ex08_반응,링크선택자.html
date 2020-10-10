@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>동적의사클래스-링크선택자,반응선택자</title>
+    <style>
+        /* 그룹선택자*/
+        h1,h2{color: #222;transition-duration: 1s;}
+        
+/*동적의사클래스(dynamic pseodo Class-슈도클래스):html 태그 안에는 없고 실제 존재하지 않지만 필요에 의해서 가상의 선택자를 지정해서 사용하는것*/
+        /* 반응선택자*/
+        h1:hover{color: #0f0;cursor: crosshair;}/* 애니메이션 변환 시간:1초 */
+        h2:hover{color: #ff5400;cursor: pointer;}
+        /* h2위에 마우스를 호버하면 마우스모양 : 손가락 변환 */
+        h1:active{background-color: #ffcc00;}/*클릭하고 있을 때*/
+        h2:active{background-color: #0f0;}
+        
+        ul{list-style: none;}
+        /*링크선택자:a태그는 파란색글씨에 밑줄 기본,방문했던 링크는 보라색에 밑줄, 클릭하고 있는 순간 빨강색*/
+        a{text-decoration: none;}
+        a:link{color: #000;} /* 링크가 걸려있는 */
+        a:visited{color: #f00;}/* 방문했었던(보라색). 주소가 비어있어도 방문했던 것처럼 인식  */
+        a:hover{color: pink;}/* 마우스를 그 위에 올렸을 때 */
+        a:active{color: #0f0;}/*클릭하고 있는 순간 */
+        a:focus{background-color: #0cc;}/* 해당요소에 초점이 맞춰졌을 때. 텍스트 필드 안에 마우스를 갖다 놓거나 tab키를 눌러 초점이 이동했을 때 */
+    </style>
+</head>
+<body>
+    <h1>웹표준</h1>
+    <h2>웹접근성</h2>
+    <h1>웹표준</h1>
+    <h2>웹접근성</h2>
+    <h1>웹표준</h1>
+    <h2>웹접근성</h2> 
+    <ul>
+        <li><a href="#">강민정</a></li>
+        <li><a href="http://www.naver.com">한태경</a></li>
+        <li><a href="http://www.daum.net">김규빈</a></li>
+        <li><a href="./ex05_class.html">안미진</a></li>
+        <li><a href="">금승정</a></li>
+    </ul>  
+
+</body>
+</html>

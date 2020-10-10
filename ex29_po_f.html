@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>position:fixed</title>
+    <style>
+        .page{width: 100%;height: 900px;}
+        #page1{background: #ff8b8b;}
+        #page2{background: #c5fa61;}
+        #page3{background: #8bffdb;}
+        #quick{width: 83px;height: 212px;background: #ccc;position: fixed;z-index: 1;right: 0;top: 30%;}
+        /* position: fixed;(body를 기준으로 위치가 고정) */
+    </style>
+</head>
+<body>
+    <div class="page" id="page1">제품소개</div>
+    <div class="page" id="page2">신제품</div>
+    <div class="page" id="page3">이달의 이벤트</div>
+    <div id="quick"><img src="images/quick.PNG" alt="퀵메뉴"></div>
+</body>
+</html>

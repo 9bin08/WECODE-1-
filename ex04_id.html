@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>id 선택자</title>
+    <style>
+        /*전체선택자*/
+        *{margin: 0;padding: 0;}
+       /* margin(외부여백):없음   padding(안쪽여백): 0;*/
+        
+        /* 태그선택자 = 타입선택자 = html 요소선택자 */
+        body{/* 웹브라우저 화면*/
+          padding: 50px;/* 안쪽여백 :50px*/
+          font-size: 12px;/* 원래 16px이 기본. 폰트크기  */
+          color: #333; /* 글씨색상 : 원래 #000 ---> #333 회색*/
+        }
+        ul{list-style-image: url(images/dot.png);}
+        /*블릿기호이미지:경로(폴더명/파일명.확장자)*/
+        a{color: #333;text-decoration: none;}
+         /*글씨색상:#333 ; 글씨장식:없음*/
+        
+        /*아이디선택자 */
+        #tit1{background-color: #ffccff;}
+        
+/*
+        1.앞에 #을 붙인다.
+        2.한 파일안에서 딱 한번만 사용가능.
+        3.대소문자를 구분한다.
+        tit1 --- tiT1
+        4.특수문자 안됨(-[하이픈],_[언더바])
+          tit!,$tit(X)
+        5.숫자먼저 오면안됨
+           1tit,2txt(X)
+        6.영문+숫자,영문+영문,영문+영문+숫자
+        tit1,toplist,toplist1
+         tit-1,top-list,top_list_1
+        7.영문+영문(카멜기법)-두번째 단어의 첫째 철자를 대문자로 쓰는 방법
+            topList
+        8.띄어쓰기 안됨
+           top list(X)
+*/
+        #toplist1{
+            background-color: aquamarine;/*배경색상*/
+            width: 200px;/* 박스의 넓이:200px*/
+            margin: 50px;/* 외부여백  */
+            padding: 30px;/* 안쪽여백 */
+        }    
+    </style>
+</head>
+<body>
+    <div id="tit1">
+        <h1>아이디 선택자</h1>
+    </div>
+    <ul id="toplist1">
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">회원가입</a></li>
+        <li><a href="#">사이트맵</a></li>
+    </ul>
+   
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">FreeBoard</a></li>
+    </ul>
+</body>
+</html>

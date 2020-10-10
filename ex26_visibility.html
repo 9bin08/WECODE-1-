@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>visibility,opacity,display:none</title>
+    <style>
+        p{width: 300px;height: 200px;background: #ffcc00;}
+        p.vis:hover{visibility:hidden;}
+        p.opa:hover{opacity:0.5;filter: blur(10px);}
+        p.non{display: none;}
+        /*visibility:hidden;opacity:0;
+
+        visibility,opacity 안보여도 자리는 차지하고 있다. display: none은 내용도 안보이고 부피,공간도 사라진다. 
+        
+        display: none;*/
+    </style>
+</head>
+<body>
+    <p class="vis">내용1</p>
+    <p class="opa">내용2</p>
+    <p class="non">내용3</p>
+    <div class="">내용4</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>결합선택자-자손,자식,그룹,종속선택자</title>
+    <style>
+     /* 초기화=reset*/
+        *{margin: 0;padding: 0;}
+        body{padding: 50px;}
+        ul{list-style-type: none;}/* 목록기호스타일:없음*/
+      
+        /*그룹선택자:여러선택자를 같은 속성을 주고자 할때. 콤마(,)로 구분함. */
+        h1,h2{background-color: #690;width: 400px;}
+        
+        /* 자손선택자(후손,하위선택자)*/
+        /*해당요소(div)의 하위요소중 특정선택자(h1) 모두선택. div와 h1사이를 띄어쓴다.*/
+        div h1{
+            color: #f09;
+            text-decoration: underline;/* 글씨장식: 밑줄*/
+        }
+        
+        /* 자식선택자:현재 요소의 바로 밑에 존재하는 선택자 */
+        div > h1{background-color: #006699;}
+        
+        /*종속선택자:태그(타입)선택자 뒤에 띄어쓰기 하지않고 곧바로 #이나 .을 붙여서 사용*/
+        div.wrap{width: 80%;background-color: #ddd;}
+    </style>
+</head>
+<body>
+   <!-- div.wrap>h1+h2+ul>li*5>a-->
+    <div class="wrap">
+        <h1>웹표준 및 웹접근성반</h1>
+        <h2>화,목반</h2>
+        <ul>
+            <li><a href="#">강민정</a></li>
+            <li><a href="#">한태경</a></li>
+            <li><a href="#">김규빈</a></li>
+            <li><a href="#">금승정</a></li>
+            <li><a href="#">안미진</a></li>
+        </ul>
+        <section>
+            <h1>CSS 선택자 종류</h1>
+            <h2>결합선택자</h2>
+            <ul>
+                <li>자손선택자</li>
+                <li>자식선택자</li>
+                <li>종속선택자</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

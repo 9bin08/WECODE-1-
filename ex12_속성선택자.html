@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>속성선택자</title>
+    <style>
+        /*태그선택자*/
+        input{color: navy;}
+        /*속성선택자*/
+        input[type]{background: #ff0;border: 1px solid #000;outline: none;}
+        /*outline: none;폼박스에 커서가 활성화되었을 때 파란색테두리 없음 처리*/
+        a[href]{font-size: 20px;}
+        a[class]{font-weight: bold;}
+        a[target="_blank"]{background-color: #ffcc00;}
+        a[class~="m3"]{border: 1px solid #f00;}
+        input[type|="text"]{background: #000;color: #ff0;}
+        h4[title^="필수"]{font-style: italic;}/*글씨스타일: 기울어진 글씨*/
+        a[href$=".html"]{background-image: url(images/dot.png);}
+        h4[title*="공"]{background-color: #fcf;}
+        /*
+        1.태그[속성]{ 속성: 속성값}
+        2.태그[속성="속성값"]{ 속성: 속성값}
+        3.태그[속성~="속성값"]:속성값과 일치하는 요소를 찾아서 스타일 적용(~:틸트)
+        4.태그[속성|="속성값"]:온전히 그 단어로만 이루어진것
+        5.태그[속성^="속성값"]:지정한 문자로 시작하는 속성에 대해서만 스타일 적용(^:캐럿)
+        6.태그[속성$="속성값"]:지정한 문자로 끝나는 속성에 대해서만 스타일 적용
+        7.태그[속성*="속성값"]:앞,뒤, 중간 상관없이 그 단어가 들어간 속성값에 대해서만 스타일 적용(*:에스터리스크)
+        */
+    </style>
+</head>
+<body>
+    아이디:  <input type="text"> <br>
+    비밀번호 : <input type="password"> <br>
+  
+   <!-- ul>li*2>a.m2-->
+   <ul>
+       <li><a href="./ex05_class.html" class="m1 m2" target="new">메뉴1</a></li>
+       <li><a href="#" class="m2 m3" target="_blank">메뉴2</a></li>
+   </ul>
+   
+  <!-- h4+ul>li*2-->
+   <h4 title="전공 선택">전공선택</h4>
+   <ul>
+       <li>선택1</li>
+       <li>선택2</li>
+   </ul>
+   
+   <h4 title="필수 선택">전공필수</h4>
+   <ul>
+       <li>선택3</li>
+       <li>선택4</li>
+   </ul>
+</body>
+</html>

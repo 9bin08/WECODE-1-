@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>display:block</title>
+    <style>
+        *{padding: 0;margin: 0;}
+        body{padding: 50px;}
+        span{display: block;width: 200px;height: 100px;font-size: 2em;background: #ff0;}
+        img{width: 200px;display: block;}
+        /*display:block(인라인 요소들을 세로로 나열되게 함. 넓이,높이 등 블럭처리됨 )*/
+        
+        h2{margin-top: 50px;}
+        a{text-decoration: none;color: #000;}
+        .btn{display: block;width: 120px;height: 50px;background: #f48989;border: 1px solid #000;text-align: center;line-height: 50px;float: left;margin-left: 30px; }
+        /*a태그에 display: block을 사용하면 블럭요소로 변환.가로,세로 부피도 가지고 링크영역을 좀 더 넓게 화면에 표시*/
+        .btn:hover{background: #890303;color: #fff;}
+    </style>
+</head>
+<body>
+    <span>You</span>
+    <img src="images/instagram_ov.png" alt="인스타그램로고">
+    <span>I</span>
+    <h2>a태그</h2>
+    <a href="#" class="btn">자세히보기</a>
+    <a href="#" class="btn">HOME</a>
+</body>
+
+</html>

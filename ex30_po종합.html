@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>position</title>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Roboto&display=swap" rel="stylesheet">
+    <style>
+    /*reset*/
+        *{margin: 0;padding: 0;}
+        body{
+            font-family: 'Nanum Gothic', 'Roboto',sans-serif;
+            font-size: 14px;
+            color: #333;
+        }
+        ul,li{list-style: none;}
+        a{text-decoration: none;color: #333;}
+        img{border: 0;}
+        
+        /* 헤더영역*/
+        #hd{width: 100%;height: 100px;background-color: rgba(255,255,255,0.6);position: fixed;top: 0;left: 0;z-index: 100;box-shadow: 0 5px 5px rgba(0,0,0,0.5)}
+        .menu{width: 600px;overflow: hidden;margin: 30px auto;}
+        .menu li{float: left;width: 120px;height: 50px;text-align: center;line-height: 50px;}
+        .menu li a{display: block;font-size: 20px;}
+        .menu li a:hover{background: #fc0;}
+       
+        #con1{width: 100%;height: 900px;background: #eee;}
+        #con2{width: 100%;height: 900px;background: #ddd;}
+        #con3{width: 100%;height: 900px;background: #ccc;}
+        
+        /*  컨텐츠1영역의 상품배열*/
+        #con1 h2{line-height: 250px;text-align: center;font-size: 30px;}
+        #pro1{width: 1300px;margin: 0 auto;}
+        #pro1 > div{width: 420px;height: 540px;border: 1px solid #ccc; float: left;box-sizing: border-box;background-size: 100% 100%;background-position: center center;background-repeat: no-repeat;position: relative;overflow: hidden;}
+        
+       /* (420px+b:2px)*3=1306px --> 보더나 패딩값이 안쪽으로 생기도록 하기위해  box-sizing: border-box 삽입 
+        position: relative;안에 있는 span 태그가 absolute이면 body를 기준으로 좌표값을 가짐. #pro1 > div를 부모로 보고 그안에 자유롭게 배치하기 위해 
+        overflow: hidden-->width: 420px;height: 540px 이 넘어가는 내용이 있다면 숨겨라
+        */
+        #pro1 .close1{background-image: url(images/01_overpitsolid.jpg);}
+         #pro1 .close2{background-image: url(images/02_overpitcg.jpg);margin: 0 20px;}
+         #pro1 .close3{background-image: url(images/03_pigmentwomtm.jpg);}
+        #pro1 .sale{display: block;width: 100px;height: 100px;background-color: rgba(8,20,96,0.7);font-size: 25px;color: #fff;text-align: center;padding-top: 20px;box-sizing: border-box;position: absolute;top: 0;right: 0;}
+        #pro1 .label{/*display: block;width: 100%;height: 50px;*/position: absolute;left: 0;right: 0;bottom: -100px;padding: 20px 0;background-color: rgba(0,0,0,0.7);color: #fff;font-size: 18px;text-align: center;transition-duration: 1s;}
+        #pro1 > div:hover .label{bottom: 0;}
+        /*transition-duration(애니메이션시간): 1s(second=초);*/
+        
+        /*  두번째 제품 영역*/
+        /*#pro2   w:620px 
+        .cake1,.cake2,.cake3 w:200px 
+        span w:50px  h:50px bg:rgba(247,173,5,0.5)
+        */
+        #con2 h2{line-height: 250px;text-align: center;font-size: 30px;}
+        #pro2{width: 620px;height: 200px;margin: 100px auto;}
+        
+        #pro2 > div{width: 200px;height: 200px;float:left; border:1px solid #ccc;box-sizing: border-box;position: relative;}
+        #pro2 > div > img{display: block;width: 100%;height: 100%;}
+        #pro2 .cake2{margin: 0 10px;}
+        #pro2 > div > span{position: absolute;top: calc(50% - 25px);left:calc(50% - 25px);z-index: 10; width: 50px;height: 50px;background-color:rgba(247, 5, 98, 0.5);color: #fff;text-align: center;padding-top: 5px;box-sizing: border-box;}
+        /*top: 50%;left: 50%;margin-left:-25px;margin-top: -25px;*/
+        /*푸터영역*/
+        #ft{width: 100%;height: 200px;background: #222;}
+        
+        /* 탑으로 가기 버튼*/
+        #top{position: fixed;right: 30px;bottom: 30px;width: 50px;height: 50px;background: rgba(255,255,255,0.7);border: 2px solid #aaa; border-radius:50%; } 
+        #top a{display: block;font-size: 18px;color: #000;text-align: center;line-height: 50px;}
+    </style>
+</head>
+<body>
+    <div id="hd">
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#con1">남성복</a></li>
+            <li><a href="#con2">새로나온 제품</a></li>
+            <li><a href="#con3">Con3</a></li>
+            <li><a href="#">Freeboard</a></li>
+        </ul>
+    </div>
+    <div id="con1">
+       <h2>남성복</h2>
+        <!--div#pro1>div.close$*3>span.sale+span.label-->
+        <div id="pro1">
+            <div class="close1">
+                <span class="sale">50% SALE</span>
+                <span class="label">오버핏 솔리드 셔츠</span>
+            </div>
+            <div class="close2">
+                <span class="sale">30% SALE</span>
+                <span class="label">오버핏 코튼 가디건</span>
+            </div>
+            <div class="close3">
+                <span class="sale">20% SALE</span>
+                <span class="label">피그먼트 워싱 오버핏 맨투맨</span>
+            </div>
+        </div>
+    </div>
+    <div id="con2">
+         <h2>11월의 케이크</h2>
+       <!-- div#pro2>div.cake$*3>img+span-->
+        <div id="pro2">
+            <div class="cake1">
+                <img src="images/cake1.jpg" alt="케이크1">
+                <span>30% SALE</span>
+            </div>
+            <div class="cake2">
+                <img src="images/cake2.jpg" alt="케이크2">
+                <span>30% SALE</span>
+            </div>
+            <div class="cake3">
+                <img src="images/cake3.jpg" alt="케이크3">
+                <span>30% SALE</span>
+            </div>
+        </div>
+    </div>
+    <div id="con3">
+        <h2>Content3</h2>
+    </div>
+    <div id="ft">Footer영역입니다.</div>
+    <div id="top"><a href="#">Top</a></div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!--header#hd
+    section#con1
+    section#con2
+    section#con3
+    footer#ft
+    div#top-->
+</body>
+</html>
